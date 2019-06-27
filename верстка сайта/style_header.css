@@ -1,0 +1,433 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+/* Хедер ( логотип и навигатор ) */
+header {
+	width: 100%;
+	background: url(https://st3.depositphotos.com/5377682/19423/v/600/depositphotos_194238994-stock-video-young-handsome-businessman-is-working.jpg);
+	background-size: cover;
+	display: flex;
+	padding: 450px 0px 90px 0px;	
+}
+
+.header-logo {
+	text-transform: uppercase;
+	color:  white;
+	font-weight: 800;
+	font-size: 46px;
+	cursor: pointer;
+	margin-top: -400px;
+	margin-left: 46%;
+	font-family: 'Coda Caption', sans-serif;
+}
+
+.header-logo1 {
+	text-transform: uppercase;
+	color:  white;
+	font-weight: 100;
+	font-size: 8px;	
+	margin-top: -44px;
+	margin-left: 148%;
+}
+
+nav {	
+	margin-top: -380px;
+	margin-left: 39%;	
+}
+
+.topnav a {
+	color: white;	
+	text-align: center;
+	padding: 12px 26px;
+	font-size: 14px;	
+}
+
+.topnav a:hover{
+	border-bottom: 3px solid #fcac45;
+}
+
+.topnav .icon {
+	display: none;
+}
+/* Доп текст для Хедера */
+.all-text {
+	width: 70%;
+	color: white;
+	margin-top: -270px;
+	margin-left: -75%;
+	margin-right: 10px;
+}
+
+.text2 {
+	text-align: center;
+	margin-top: 70px;
+	margin-left: -15%;	
+}
+
+.text3 {
+	border: 1px solid white;
+	text-align: center;
+	margin-top: 70px;
+	margin-left: 65%;
+	padding: 15px;
+}
+
+
+
+
+/* "Что мы делаем"/"Как мы работаем"/"Бизнес в цифрах" */
+.main-team-business {
+	background: url(Images/img6.jpg);
+}
+
+.team-cards {
+	text-align: center;
+	padding: 100px 50px 30px 50px;	
+}
+
+.main-team h1 {
+	margin-bottom: 10px;
+	margin-left: 13%;
+	margin-top: 80px;
+}
+
+.main-team-business h1 {
+	margin-bottom: 10px;
+	margin-left: 13%;
+	margin-top: 80px;
+	color: white;
+}
+
+.photo {
+	background: gray;
+	width: 125px;
+	height: 125px;
+	border-radius: 50%;
+	margin: 20px;	
+}
+
+.wrapper {
+	display: flex;
+}
+
+.wrapper-business {
+	display: flex;
+	color: white;
+}
+
+.card {
+	text-align: left;
+	margin: 0 60px;	
+}
+
+.card.over {
+	background: #6DB6DD;
+}
+
+.name {
+	font-size: 20px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.name-business {
+	font-size: 150px;
+	margin-bottom: 20px;
+	font-family: 'a_CooperBlackOtl', arial;
+	opacity: 0.6;
+}
+
+.position {
+	font-size: 14px;
+	margin-bottom: 35px;	
+}
+
+.about-position {
+	font-size: 10px;
+	margin-bottom: 0px;
+}
+
+#bord {
+	border: 1px solid black;
+	padding: 10px;		
+}
+
+
+/* Наши проекты */
+.wrapper00 {
+	width: 90%;
+	margin: auto;
+}
+
+.project-left {
+	margin-left: 10%;
+}
+
+.project-left h1 {
+	margin-bottom: 40px;
+	margin-left: -8%;
+}
+
+main .main-project {
+	display: flex;
+	padding: 80px 0 80px 0;
+}
+
+.project-right {
+	margin-top: 100px;
+	margin-right: 10px;	
+	margin-left: 100px;	
+	display: inline-block;
+	font-size: 11px;
+	padding: 50px 0 50px 0;	
+}
+
+.project-right h3 {
+	padding-bottom: 15px;
+}
+
+.project-right li {
+	margin: 15px 0 15px 0;
+	list-style-type: none;	
+}
+
+.project-right li:before {
+	content: "-   "
+}
+
+.project-right p {
+	margin: 15px 100px 15px 0;
+}
+
+.wrapper01 {
+	text-align: right;
+	margin: 0 100px 0 0;
+}
+
+.wrapper02 {
+	text-align: left;
+	margin: 80px 0 0 0;
+}
+
+.wrapper02 h3 {
+	margin: 0 0 0 10%;
+}
+
+.img-w-100 {
+	min-width: 100%;
+}
+
+/* Наши партнеры */
+.part {
+	margin-bottom: 10px;
+	margin-left: 13%;
+	margin-top: 10px;
+	font-size: 20px;
+}
+
+#slide_line{width:100%;margin:0 auto;text-align:center;overflow:hidden;}
+#slide_line img{width:9.4%;height:auto;}
+.string:hover{cursor:pointer;}
+ 
+@media (max-width:800px){
+#slide_line img{width:28%;max-width:160px;margin-right:1%;}
+}
+@media (max-width:450px){
+#slide_line img{width:99%;}
+}
+
+/* Форма обратной связи */
+.contact-form {
+	width: 90%;
+	margin: 0 100px 0 100px;
+	background: url(Images/img01.jpg);
+	background-size: cover;
+}
+.form-wrapper {
+	padding: 100px 10% 100px 10%;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+}
+
+.form-wrapper p {
+	font-size: 12px;
+}
+
+.contact-wrapper {
+	width: 600px;
+	margin: 0 auto;	
+	background-color: white;
+}
+
+input {
+	width: 360px;
+	height: 30px;
+	font-size: 16px;
+	margin-bottom: 30px;
+	margin-right: 20px;
+}
+
+.form-inputs input {
+	margin-left: 200px;
+}
+
+.button-block {
+	display: flex;
+	justify-content: flex-center;
+}
+
+input[type=submit] {
+	width: 165px;
+	height: 40px;
+	color: blue;
+	font-style: bold;
+	border-color: blue;
+	background-color: white;
+	margin-top: 30px;
+	opacity: 1;
+	box-shadow: 5px 5px 5px #98D1EF;		
+}
+
+.x {
+	padding: 20px;
+}
+
+/* Контакты */
+.wrapp {
+	width: 85%;
+	margin: 0 auto;	
+}
+
+section .cont {
+	display: flex;
+	padding: 50px 0 50px 0;	
+}
+
+.cont-logo {
+	text-transform: uppercase;
+	color:  gray;
+	font-weight: 800;
+	font-size: 30px;	
+	font-family: 'Coda Caption', sans-serif;
+}
+
+.cont-left img {
+	width: 100px;
+}
+
+.cont-right {
+	margin-left: 450px;
+}
+
+.te {
+	font-size: 12px;		
+}
+
+.ti {
+	padding-bottom: 15px;
+	color: grey;
+}
+
+th {
+	padding: 0 50px 0 0;
+	text-align: left;
+}
+
+.a {
+	font-size: 12px;
+	margin-top: -30px;
+}
+
+.b {
+	color:grey;
+	margin-left: 450px;
+}
+
+
+
+
+/* Адаптивность */
+@media screen and (max-width: 1200px) {
+	nav {
+		margin-left: 20%;
+	}
+}
+
+@media screen and (max-width: 1105px) {
+	nav {
+		margin-left: 10%;
+	}
+}
+
+@media screen and (max-width: 1010px) {
+	.topnav a {
+		display: none;		
+	}
+
+	.topnav a.icon {
+		float: center;
+		margin-top: -17px;
+		display: block;
+		color: white;
+		font-size: 25px;
+	}
+
+	nav {
+		width: 100%;
+	}
+
+	.topnav.responsive {
+		position: relative;
+		top: 50px;
+		left: -200px;
+	}
+
+	header .topnav.responsive {
+		height: 340px;
+	}
+
+	.topnav.responsive a.icon {
+		position: absolute;
+		top: -50px;
+		left: -200px;
+	}
+
+	.topnav.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+
+	/* Адаптивность "наши проекты" */		
+	.img-w-100 {
+		max-width: 100%;
+	}
+
+	.main-project {
+		flex-direction: column;
+	}
+
+	.project-right {
+		text-align: center;
+		margin-left: 0;
+	}
+
+	/* Адаптивность "Что мы делаем"/"Как мы работаем" */
+	.wrapper {
+		flex-direction: column;
+	}
+
+	.card {
+		text-align: center;	
+	}
+
+
+
+}	
+
