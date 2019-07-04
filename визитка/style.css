@@ -157,7 +157,7 @@ article {
         margin-top: 60px;
     }
 }
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 400px) {
     .subscribe input[type="text"], .subscribe input[type="email"] {
         width: 260px;
     }
