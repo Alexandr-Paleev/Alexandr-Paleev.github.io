@@ -59,7 +59,7 @@ header {
     header>h1 {
     	font-size: 60pt;
         font-family: 'Raleway', sans-serif;
-        margin-bottom: 25px;
+        margin-bottom: 35px;
         color: pink;
     }
     header>h3 {
@@ -162,7 +162,7 @@ article {
         width: 260px;
     }
     header {
-        padding: 30px 20px;
+        padding: 30px 10px;
     }
     header>h1 {
         font-size: 46pt; margin-bottom: 60px; color: pink;
