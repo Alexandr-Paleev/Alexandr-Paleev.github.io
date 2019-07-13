@@ -29,57 +29,67 @@
 		});
 	});
 
-	let box;
-	let listTasks;
 
 	function showTasks(res) {
-		
-	    res.forEach(task => {
 
-	    	box = document.createElement('input');
-		    box.name = name;
-		    box.type = 'checkbox';
-		    //box.setAttribute('onchange', 'func(this)');
-		    box.classList.add('checkbox');
-
-	        listTasks = document.createElement('label');
-	        listTasks.appendChild(box);
+		res.forEach(task => {
 
 	        if (task.userId == 2 && task.completed == false) {
-	        	listTasks.appendChild(document.createTextNode(task.title));
-	        	box.checked = false;
-	        	listTasks.classList.add('listFalse');
-	            resultFalse.appendChild(listTasks);
+
+	        	const box = document.createElement('input');
+	        	box.id = task.id;
+				box.name = name;
+				box.type = 'checkbox';
+				box.classList.add('checkbox');
+
+	        	const listTasksFalse = document.createElement('label');
+				listTasksFalse.appendChild(box);
+
+	        	listTasksFalse.appendChild(document.createTextNode(task.title));
+	        	box.checked = false;allBox
+	        	listTasksFalse.classList.add('listFalse');
+	            resultFalse.appendChild(listTasksFalse);
 
 	        }else if (task.userId == 2 && task.completed == true) {
-	        	listTasks.appendChild(document.createTextNode(task.title));
+
+	        	const box = document.createElement('input');
+	        	box.id = task.id;
+				box.name = name;
+				box.type = 'checkbox';
+				box.classList.add('checkbox');
+
+	        	const listTasksTrue = document.createElement('label');
+				listTasksTrue.appendChild(box);
+
+	        	listTasksTrue.appendChild(document.createTextNode(task.title));
 	        	box.checked = true;
-	        	listTasks.classList.add('listTrue');
-	            resultTrue.appendChild(listTasks);
-	        }
-	 
+	        	listTasksTrue.classList.add('listTrue');
+	            resultTrue.appendChild(listTasksTrue);
+	        }	 
 	    });
-	}
 
-	// function func(checkbox) {
-	//   if (checkbox.checked == true) {
-	//     let checkboxes = document.getElementsByClassName('checkbox');
-	//     for (let i=0; i<checkboxes.length; i++) {
-	//       checkboxes[i].checked = false;
-	//     }
-	//     checkbox.checked = true;    
-	// 	}
-	// }
-	  
+	    const itemTrue = [...(document.querySelectorAll('.listTrue'))];
+		console.log(itemTrue);
+		for (let key of itemTrue) {
+			console.log(key);
+		}
 
-	allBox.addEventListener('change', function(event) {
-		if (event.target.classList.contains('listFalse') && event.target.checked) {
-			[].slice.call(document.querySelectorAll('.listFalse')).forEach(a => {
-				a.classList.remove('.listFalse');
-				a.classList.add('.listTrue');
+	    const itemFalse = [...(document.querySelectorAll('.listFalse'))];
+	    console.log(itemFalse);
+	    for (let key of itemFalse) {
+	    	console.log(key);
+	    
+		    key.addEventListener('change', function(e) {
+				if (e.target.classList.contains('listFalse')) {
+					e.target.classList.toggle('listTrue');
+				}else if (e.target.classList.contains('checkbox')) {
+					let div = e.target.parentNode;
+					div.classList.add('listTrue');
+					div.remove();
+					resultTrue.appendChild(div);
+				}
 			});
-			event.target.checked = true;
-		}	
-	});
+		}
+	}
 
 })();
