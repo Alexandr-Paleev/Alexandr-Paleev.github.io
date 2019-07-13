@@ -17,22 +17,25 @@
 
 
 	fetchButton.addEventListener('click', () => {
-		fetch('https://jsonplaceholder.typicode.com/todos').then(respons => {
-			if (respons.ok) {
-				respons.json().then(json => {
-					res = json;
-					showTasks(res);
-				});
+		fetch('https://jsonplaceholder.typicode.com/todos')
+		.then(respons => {
+			if (respons.ok ? respons : Promise.reject()) {
+				return respons.json();
 			}else{
-				alert(`Ответ ${respons.status} ${respons.statusText}`);
+				return reject();
 			}
+		}).then(data => {			
+			showTasks(data);
+		}).catch(() => {
+			alert(`Error: API - not found`);
 		});
-	});
+			
+	}, {once : true});
 
 
-	function showTasks(res) {
+	function showTasks(data) {
 
-		res.forEach(task => {
+		data.forEach(task => {
 
 	        if (task.userId == 2 && task.completed == false) {
 
@@ -46,7 +49,7 @@
 				listTasksFalse.appendChild(box);
 
 	        	listTasksFalse.appendChild(document.createTextNode(task.title));
-	        	box.checked = false;allBox
+	        	box.checked = false;
 	        	listTasksFalse.classList.add('listFalse');
 	            resultFalse.appendChild(listTasksFalse);
 
@@ -69,25 +72,22 @@
 	    });
 
 	    const itemTrue = [...(document.querySelectorAll('.listTrue'))];
-		console.log(itemTrue);
-		for (let key of itemTrue) {
-			console.log(key);
-		}
-
+		
 	    const itemFalse = [...(document.querySelectorAll('.listFalse'))];
-	    console.log(itemFalse);
 	    for (let key of itemFalse) {
-	    	console.log(key);
 	    
-		    key.addEventListener('change', function(e) {
+		    key.addEventListener('change', e => {
 				if (e.target.classList.contains('listFalse')) {
 					e.target.classList.toggle('listTrue');
 				}else if (e.target.classList.contains('checkbox')) {
 					let div = e.target.parentNode;
 					div.classList.add('listTrue');
-					div.remove();
-					resultTrue.appendChild(div);
+					setTimeout(() => {
+						div.remove();
+					    resultTrue.appendChild(div);
+					}, 1500);
 				}
+
 			});
 		}
 	}
