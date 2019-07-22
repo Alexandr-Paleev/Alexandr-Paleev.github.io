@@ -6,13 +6,13 @@
 	margin: 50px auto;
 	position: relative;
 	overflow: hidden;
-	width: 500px;
-	height: 700px;
+	width: 250px;
+	height: 350px;
 	border: 1px solid black;
 }
 .tetris {
-	width: 500px;
-	height: 900px;
+	width: 250px;
+	height: 450px;
 	display: flex;
 	overflow: hidden;
 	flex-wrap: wrap;
@@ -21,8 +21,8 @@
 	background-color: white;
 }
 .excel {
-	width: 50px;
-	height: 50px;
+	width: 25px;
+	height: 25px;
 	border: 1px solid lightgray;
 }
 .figure, .set {
@@ -30,15 +30,9 @@
 }
 input {
 	display: block;
-	margin: 30px auto;
-	font-size: 30px;
+	margin: 15px auto;
+	font-size: 15px;
 	padding: 10px;
-}
-.controls {
-	padding: 20px;
-	position: absolute;
-	top: 200px;
-	right: 20px;
 }
 .modal {
 	position: fixed;
@@ -77,4 +71,7 @@ input {
 	height: 100%;
 	z-index: 2;
 	background-color: darkblue;
+}
+.contr {
+	margin-left: 40%;
 }

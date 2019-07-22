@@ -315,7 +315,7 @@ function startGame() {
 
 	let score = 0;
 	let input = document.getElementsByTagName('input')[0];
-	input.value = `Ваши баллы: ${score}`;
+	input.value = `Your score: ${score}`;
 
 	function move() {
 		let moveFlag = true;
