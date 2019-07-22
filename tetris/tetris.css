@@ -38,7 +38,7 @@ input {
 	padding: 20px;
 	position: absolute;
 	top: 200px;
-	right: 200px;
+	right: 20px;
 }
 .modal {
 	position: fixed;
