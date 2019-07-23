@@ -80,4 +80,20 @@ input {
 	.contr {
 		margin: 0 auto;
 	}
+	.modal {
+		position: fixed;
+		text-transform: uppercase;
+		width: 250px;
+		height: 250px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #fff;
+		z-index: 3;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		border-radius: 20px;
+	}
 }
