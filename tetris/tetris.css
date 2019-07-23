@@ -78,7 +78,7 @@ input {
 
 @media screen and (max-width: 510px) {
 	.contr {
-		margin: 0 auto;
+		display: none;
 	}
 	.modal {
 		width: 250px;
