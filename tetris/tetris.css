@@ -90,4 +90,9 @@ input {
 		padding: 15px 0;
 		font-size: 12px;
 	}
+	.modal > h1 {
+		font-size: 17px;
+	}
+	.modal > h2 {
+		font-size: 14px;
 }
