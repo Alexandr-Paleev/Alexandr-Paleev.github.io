@@ -75,3 +75,9 @@ input {
 .contr {
 	margin-left: 40%;
 }
+
+@media screen and (max-width: 510px) {
+	.contr {
+		margin: 0 auto;
+	}
+}
